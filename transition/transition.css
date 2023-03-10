@@ -1,0 +1,33 @@
+.shop-bg {
+    background-color: #eee;
+    padding: 20px;
+}
+
+.shop-container {
+    display: flex;
+
+}
+
+.shop-item {
+    width: 30%;
+    margin: 10px;
+}
+
+.shop-item img {
+    width: 100%;
+    display: block;
+}
+
+/* 이미지 밑에 보이지 않는 선이 있는데, img에 display : bloack을 주면 사라진다  */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+}
+
+.overlay:hover {
+    opacity: 0.3;
+    transition: all 1s;
+}
