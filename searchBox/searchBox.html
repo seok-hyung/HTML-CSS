@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>검색엔진</title>
+</head>
+
+<body>
+    <h1>상품 검색</h1>
+    <label for="search">검색어:</label>
+    <input onkeyup="search()" type="text" id="search">
+    <button onclick="search()">검색</button>
+    <div id="results"></div>
+
+    <script>
+        // 예시 데이터베이스
+        var products = [
+            { "id": 1, "name": "Apple iPhone 13", "price": 1299 },
+            { "id": 2, "name": "Samsung Galaxy S21", "price": 999 },
+            { "id": 3, "name": "Google Pixel 6", "price": 899 }
+        ];
+
+        function search() {
+            var keyword = document.getElementById("search").value;
+            var results = [];
+
+            // 검색어와 일치하는 상품을 찾음
+            for (var i = 0; i < products.length; i++) {
+                if (products[i].name.toLowerCase().indexOf(keyword.toLowerCase()) !== -1) {
+                    results.push(products[i]);
+                }
+            }
+
+            // 결과를 출력
+            var resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = "";
+            for (var i = 0; i < results.length; i++) {
+                var product = results[i];
+                resultsDiv.innerHTML += "<p>" + product.name + " - " + product.price + "원</p>";
+            }
+
+            // 검색어 입력 필드를 지움
+            //document.getElementById("search").value = "";
+        }
+    </script>
+</body>
+
+</html>
