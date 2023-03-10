@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+}
+
+.slide-container {
+    width: 300vw;
+    transition: all 1s;
+}
+
+.slide-container .slide-box {
+    width: 100vw;
+    float: left;
+}
+
+.slide-container img {
+    width: 100%;
+}
+
+/* .next-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+
+} */

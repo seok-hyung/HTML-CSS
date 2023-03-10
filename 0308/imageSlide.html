@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="./imageSlide.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="overflow: hidden;">
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="./images/car1.png" alt="">
+            </div>
+            <div class="slide-box">
+                <img src="./images/car2.png" alt="">
+            </div>
+            <div class="slide-box">
+                <img src="./images/car3.png" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+    <button class="before">이전</button>
+    <button class="next">다음</button>
+
+    <!-- 버튼 -->
+    <script>
+        let 지금사진 = 1;
+
+        document.querySelector('.slide-2').addEventListener('click', function () {
+            document.querySelector('.slide-container').style.transform = 'translateX(-100vw)'
+            지금사진 = 2
+        })
+        document.querySelector('.slide-3').addEventListener('click', function () {
+            document.querySelector('.slide-container').style.transform = "translateX(-200vw)"
+            지금사진 = 3
+        })
+        document.querySelector('.slide-1').addEventListener('click', function () {
+            document.querySelector('.slide-container').style.transform = 'translateX(0vw)';
+            지금사진 = 1
+        })
+
+        /* 다음 버튼 */
+        document.querySelector('.next').addEventListener('click', function (e) {
+            if (지금사진 == 3) {
+                e.preventDefault
+            } else {
+                document.querySelector('.slide-container').style.transform = `translateX(-${지금사진}00vw)`;
+                지금사진 += 1
+            }
+        })
+        /* 이전 버튼 */
+        document.querySelector('.before').addEventListener('click', function (e) {
+            if (지금사진 == 1) {
+                e.preventDefault
+            } else {
+                document.querySelector('.slide-container').style.transform = 'translateX(-' + (지금사진 - 2) + '00vw)';
+                지금사진 -= 1
+            }
+        })
+    </script>
+
+    <!-- 마우스 이벤트 & 스와이프 기능 -->
+    <script>
+        let 시작좌표 = 0;
+        let 눌렀냐 = false;
+        let 이동거리 = 0;
+        /* 마우스 눌렀을떄*/
+        /*document.querySelectorAll('.slide-box')[0].addEventListener('mousedown', function (e) {
+            시작좌표 = e.clientX;
+            눌렀냐 = true;
+        })*/
+        /* 요소 위에 마우스커서가 있을때 */
+        /*document.querySelectorAll('.slide-box')[0].addEventListener('mousemove', function (e) {
+            if (눌렀냐 == true) {
+                document.querySelector('.slide-container').style.transform = `translateX(${e.clientX - 시작좌표}px)`
+                이동거리 = e.clientX - 시작좌표
+
+            }
+        })*/
+        /* 마우스를 땠을때 */
+        /*document.querySelectorAll('.slide-box')[0].addEventListener('mouseup', function (e) {
+            눌렀냐 = false;
+            console.log(이동거리);
+            if (e.clientX - 시작좌표 < -100) {
+                document.querySelector('.slide-container').style.transition = 'all 0.5s';
+                document.querySelector('.slide-container').style.transfrom = 'translateX(-100vw)';
+            } else {
+                document.querySelector('.slide-container').style.transition = 'all 0.5s';
+                document.querySelector('.slide-container').style.transfrom = 'translateX(0vw)';
+            }
+            setTimeout(() => {
+                document.querySelector('.slide-container').style.transition = 'none';
+            }, 500)
+        })*/
+
+        /*
+        $('.slide-box').eq(0).on('mouseup', function (e) {
+            눌렀냐 = false;
+
+            if (e.clientX - 시작좌표 < -100) {
+                $('.slide-container').css('transition', 'all 0.5s').css('transform', 'translateX(-100vw)');
+            } else {
+                $('.slide-container').css('transition', 'all 0.5s').css('transform', 'translateX(0vw)');
+            }
+            setTimeout(() => {
+                $('.slide-container').css('transition', 'none')
+            }, 500)
+
+        });
+        */
+    </script>
+</body>
+
+</html>

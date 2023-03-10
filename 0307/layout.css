@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: darkblue;
+    padding: 20px;
+}
+
+.container header{
+    width: 100%;
+    height: 100px;
+    background-color: teal;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    
+}
+.container div{
+    display: flex;
+    
+}
+.container section{
+    width: 70%;
+    height: 400px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+.container aside {
+    width: 30%;
+    height: 400px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    
+}
+.container footer{
+    width: 100%;
+    height: 100px;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.ally-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
