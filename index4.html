@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main4.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="stylesheet" href="test.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="flex-container">
+        <div class="flex-item" >Logo</div>
+        <div style="flex-grow:1"></div>
+        <div class="flex-item">products</div>
+        <div class="flex-item">services</div>           
+    </nav>
+    </nav>
+    <div class="cart-background">
+        <div class="cart">
+            <h3>Your Shopping cart</h3>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>Item</td>
+                        <td>Amount</td>
+                        <td>Price</td>
+                        <td>Total</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>카메라</td>
+                        <td>1</td>
+                        <td>7000</td>
+                        <td>7000</td>
+                    </tr>
+                    <td colspan="5" style="text-align: right;"> 총가격 : 7000</td>
+                </tbody>
+            </table>
+            <button class="btn" style="margin:auto ">구매하기</button>
+            <div style="float:none;clear: both;"></div>
+            
+        </div>
+        
+    </div>
+
+    <div class="tab-container">
+        <div class="tab-items">
+            <i class="fa-solid fa-cart-shopping fa-3x" ></i>
+            <h4>Fast Shipping</h4>
+            <p>shipping</p>
+        </div>
+        <div class="tab-items">
+            <i class="fa-solid fa-earth-americas fa-3x"></i>
+            <h4>Good Service</h4>
+            <p>service</p>
+        </div>
+        <div class="tab-items">
+            <i class="fa-solid fa-ticket fa-3x"></i>
+            <h4>Free Coupons</h4>
+            <p>coupons</p>
+        </div>
+        <div class="tab-items">
+            <i class="fa-solid fa-shirt fa-3x"></i>
+            <h4>New Products</h4>
+            <p>products</p>
+        </div>
+        <div style="float: none; clear: both; "></div>
+    </div>
+
+    <div class="shop-bg">
+        <div class="shop-container">
+            <div class="shop-item">
+                <div style="position: relative;">
+                    <div class="overlay"></div>
+                    <img src="images/product1-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="shop-item">
+                <div style="position:relative">
+                    <div class="overlay"></div>
+                    <img src="images/product2.jpg" alt="">
+                </div>
+            </div>
+            <div class="shop-item">
+                <div style="position:relative">
+                    <div class="overlay"></div>
+                    <img src="images/product3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="test"></div>
+
+    <ul class="box-container">
+        <li class="box-item">Cras justo odio</li>
+        <li class="box-item">Dapibus ac facilisis in</li>
+        <li class="box-item">Morbi leo risus</li>
+    </ul>
+
+    <ul class="homework2-container">
+        <li class="homework2-item">
+            <div class="flex">
+                <h2>Well done!</h2>
+                <p>You successfully read this important alert message</p>
+            </div>
+        </li>
+        <li class="homework2-item">
+            <div class="flex">
+                <h2>Heads up!</h2>
+                <p>This alert needs your attention, but it's not super important</p>
+            </div>
+        </li>
+        <li class="homework2-item">
+            <div class="flex">
+                <h2>Warnning!</h2>
+                <p>Better check yourself, you're not looking too good</p>
+            </div>
+        </li>
+    </ul>
+    <script>
+        const Title = 'Create HTML Element'
+        const groupOfItems = ['item1','item2','item3','item4']
+        const makeItems = (groupOfItems)=>{
+            let htmlStr = '';
+            for(let item of groupOfItems){
+                htmlStr += `<li class="item">${item}</li>`;
+            }
+            return htmlStr;
+        }
+
+        document.querySelector('.test').insertAdjacentHTML('beforeend',`<div class="container">
+                <header>
+                    <h1 class="heading__primary">${Title}</h1>
+                </header>
+                <ul class="item-container">
+                    ${makeItems(groupOfItems)}
+                </ul>
+            </div>`
+        )
+    </script>
+</body>
+</html>
