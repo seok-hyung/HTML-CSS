@@ -1,0 +1,151 @@
+:root {
+  font-family: "Montserrat", sans-serif;
+  /*
+  font-weight: 500;
+  font-weight: 700;
+  */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #673399;
+}
+
+.wrapper {
+  width: 1080px;
+  margin: 100px auto;
+}
+
+.title {
+  margin-bottom: 100px;
+  display: flex;
+}
+
+.title h1 {
+  width: 26%;
+  font-size: 40px;
+  color: white;
+}
+
+.title span {
+  box-shadow: inset 0 -20px 0 orangered;
+}
+
+.title p {
+  font-size: 14px;
+  color: #bd8fe8;
+}
+
+.line {
+  display: flex;
+  flex-basis: 55%;
+  align-items: center;
+  margin: 12px 0px;
+}
+
+.line::before {
+  content: "";
+  min-width: 90px;
+  background: #bd8fe8;
+  height: 2px;
+  margin: 0px 20px 0px 0px;
+}
+
+.items {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.items [class^=img-box] {
+  width: 26%;
+  min-width: 280px;
+  position: relative;
+}
+
+.items img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.items .img-box1::before {
+  content: "Rest";
+  text-align: center;
+  font-size: 30px;
+  line-height: 180px;
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.items .img-box2::before {
+  content: "Craft";
+  text-align: center;
+  font-size: 30px;
+  line-height: 180px;
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.items .img-box3::before {
+  content: "Scrap";
+  text-align: center;
+  font-size: 30px;
+  line-height: 180px;
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.items .items-content {
+  width: 100%;
+  padding: 24px;
+  background-color: white;
+}
+
+.items .items-content h2 {
+  font-size: 18px;
+  color: purple;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.items .items-content li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.items .items-content li:last-child {
+  margin-bottom: 0px;
+}
+
+li::marker {
+  color: #bd8fe8;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
