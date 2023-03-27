@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+button {
+    background: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+li {
+    list-style: none;
+}
+
+.sold-out {
+    position: relative;
+}
+
+.sold-out::before {
+    content: '';
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-image: url(./images/badge.png);
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -10px;
+    /* right: 0;
+    transform: rotate(90deg); */
+}
+
+.bg {
+    background-color: seashell;
+}
+
+.wrapper {
+    background-color: seashell;
+    width: 1080px;
+    box-shadow: inset 0 0 10px red;
+    margin: 0 auto;
+}
+
+.bg2 {
+    background-color: #673399;
+}
+
+.wrapper2 {
+    width: 1080px;
+    box-shadow: inset 0 0 10px red;
+    margin: 0 auto;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title>h2 {
+    font-size: 40px;
+    width: calc(1032px/3);
+    box-shadow: inset 0 0 10px blue;
+    color: salmon;
+    margin: 100px 0;
+
+}
+
+.title span {
+    box-shadow: inset 0 -20px 0 0px white;
+}
+
+.title button {
+    align-self: center;
+    padding: 15px 30px;
+    background-color: rgb(253 64 0);
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 0 0 rgb(186 40 0);
+}
+
+.list-box {
+    display: flex;
+}
+
+.list-box li+li {
+    margin-left: 24px;
+}
+
+.list-items {
+    flex-basis: 30%;
+    max-width: 32%;
+    flex-grow: 1;
+    box-shadow: inset 0 0 10px yellow;
+}
+
+.list-text {
+    padding: 24px;
+    background-color: white;
+    box-shadow: inset 0 0 10px blue;
+}
+
+.list-text>h2 {
+    margin-top: 24px;
+    font-size: 26px;
+    word-break: keep-all;
+    box-shadow: inset 0 0 10px green;
+}
+
+.list-text>p {
+    margin-top: 32px;
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.list-text>p::-webkit-scrollbar {
+    width: 5px;
+}
+
+.list-text>p::-webkit-scrollbar-thumb {
+    background-color: gray;
+}
+
+.list-text>p::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+.list-items img {
+    width: 100%;
+
+}
+
+.stacks {
+    background-color: #f1e0f8;
+    color: #673399;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 10px;
+
+}
+
+footer {
+    line-height: 68px;
+    border-top: 5px solid #eee;
+    margin-top: 24px;
+    margin-right: -20px;
+    box-shadow: inset 0 0 10px gray;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+
+}
+
+.profile {
+    display: flex;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.profile img+img {
+    margin-left: -10px;
+}
